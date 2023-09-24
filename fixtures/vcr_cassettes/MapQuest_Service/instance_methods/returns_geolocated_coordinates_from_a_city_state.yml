@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?location=new%20orleans,%20la
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Key:
+      - "<MQKEY>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Date:
+      - Sun, 24 Sep 2023 22:22:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '46'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '15000'
+      X-Ratelimit-Remaining-2628000:
+      - '14993'
+      Ratelimit-Limit:
+      - '15000'
+      Ratelimit-Remaining:
+      - '14993'
+      Ratelimit-Reset:
+      - '2093863'
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Powered-By:
+      - MapQuest
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "message":"An unexpected error occurred"
+        }
+  recorded_at: Sun, 24 Sep 2023 22:22:49 GMT
+recorded_with: VCR 6.2.0

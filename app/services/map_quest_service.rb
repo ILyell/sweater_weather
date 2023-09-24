@@ -13,7 +13,6 @@ class MapQuestService
     def get_geolocation(city,state)
         response = get_url("/geocoding/v1/address?location=#{city}, #{state}")
         body = JSON.parse(response.body, symbolize_names: true)
-        binding.pry
         body[:results][0][:locations][0][:latLng]
     end
 end

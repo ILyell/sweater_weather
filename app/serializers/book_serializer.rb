@@ -5,6 +5,7 @@ class BookSerializer
         @geo = geo_service.get_geolocation(@location)
         @weather = weather_service.get_forecast(@geo[:lat], @geo[:lng])
         @books = library_service.book_search(@location, params[:quantity])
+
     end
 
     def geo_service

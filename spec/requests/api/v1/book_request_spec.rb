@@ -7,7 +7,6 @@ describe 'Book Request', type: :request do
             get api_v1_book_search_path, params: { location: 'denver,co', quantity: 5 }
 
             expect(response).to be_successful
-            binding.pry
             books = JSON.parse(response.body, symbolize_names: true)
 
             expect(books).to have_key(:data)

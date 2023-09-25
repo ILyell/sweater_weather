@@ -1,6 +1,7 @@
 class Api::V1::BooksController < ApplicationController
     def index
-        render josn: BookSerializer.new(search_params).serialize 
+        search = BookSerializer.new(search_params)
+        render json: search.serialize 
     end
 
     private

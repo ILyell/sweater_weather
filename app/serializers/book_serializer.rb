@@ -22,7 +22,7 @@ class BookSerializer
     def serialize
         {
             data: {
-                id: null,
+                id: "null",
                 type: "books",
                 attributes: {
                     destination: @location,
@@ -40,7 +40,7 @@ class BookSerializer
     def book_serialize
         @books[:docs].map do |book|
             {
-                title: book[:title]
+                title: book[:title],
                 isbn: book[:isbn]
             }
         end

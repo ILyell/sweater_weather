@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-describe Api::V0::BooksController, type: :request do
+describe 'Book Request', type: :request do
     describe 'book search endpoint' do
-        it 'returns a json when the correct params are passed' do
-            
-            get api_v0_book_path, params = { location: 'denver,co', quantity: 5 }
+        it 'returns a json when the correct params are passed', :vcr do
+
+            get api_v1_book_search_path, params: { location: 'denver,co', quantity: 5 }
 
             expect(response).to be_successful
-
+            binding.pry
             books = JSON.parse(response.body, symbolize_names: true)
 
             expect(books).to have_key(:data)

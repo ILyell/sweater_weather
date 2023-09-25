@@ -1,8 +1,7 @@
 class ForecastSerializer
     def initialize(params)
-        @city = params[:city]
-        @state = params[:state]
-        @geo = geo_service.get_geolocation(@city, @state)
+        @location = params
+        @geo = geo_service.get_geolocation(@location)
         @weather = weather_service.get_forecast(@geo[:lat], @geo[:lng])
     end
 

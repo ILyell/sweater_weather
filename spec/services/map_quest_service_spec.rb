@@ -5,7 +5,7 @@ RSpec.describe 'MapQuest Service' do
         it 'returns geolocated coordinates from a city, state', :vcr do
             service = MapQuestService.new
 
-            location = service.get_geolocation("new orleans","la")
+            location = service.get_geolocation("new orleans, la")
 
             expect(location).to have_key(:lat)
             expect(location).to have_key(:lng)

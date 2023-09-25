@@ -1,0 +1,472 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://openlibrary.org/search.json?limit=5&q=new%20orleans,%20la
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.18.0 (Ubuntu)
+      Date:
+      - Mon, 25 Sep 2023 16:00:19 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - GET, OPTIONS
+      Access-Control-Max-Age:
+      - '86400'
+      X-Ol-Stats:
+      - '"SR 1 0.323 TT 0 0.324"'
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "numFound": 6734,
+            "start": 0,
+            "numFoundExact": true,
+            "docs": [
+                {
+                    "key": "/works/OL7476917W",
+                    "type": "work",
+                    "seed": [
+                        "/books/OL6130302M",
+                        "/books/OL6220190M",
+                        "/works/OL7476917W",
+                        "/subjects/carnival",
+                        "/subjects/place:louisiana",
+                        "/subjects/place:new_orleans",
+                        "/authors/OL2267623A"
+                    ],
+                    "title": "New Orleans masquerade",
+                    "title_suggest": "New Orleans masquerade",
+                    "title_sort": "New Orleans masquerade",
+                    "edition_count": 2,
+                    "edition_key": [
+                        "OL6130302M",
+                        "OL6220190M"
+                    ],
+                    "publish_date": [
+                        "1952",
+                        "1957"
+                    ],
+                    "publish_year": [
+                        1952,
+                        1957
+                    ],
+                    "first_publish_year": 1952,
+                    "number_of_pages_median": 247,
+                    "lccn": [
+                        "57004852",
+                        "53000950"
+                    ],
+                    "publish_place": [
+                        "New Orleans"
+                    ],
+                    "oclc": [
+                        "1855253",
+                        "2889405"
+                    ],
+                    "lcc": [
+                        "F--0379.00000000.N5 L14 1957",
+                        "F--0379.00000000.N5 L14"
+                    ],
+                    "ddc": [
+                        "976.335"
+                    ],
+                    "last_modified_i": 1601199048,
+                    "ebook_count_i": 0,
+                    "ebook_access": "no_ebook",
+                    "has_fulltext": false,
+                    "public_scan_b": false,
+                    "readinglog_count": 1,
+                    "want_to_read_count": 1,
+                    "currently_reading_count": 0,
+                    "already_read_count": 0,
+                    "publisher": [
+                        "Pelican Pub. Co."
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "author_key": [
+                        "OL2267623A"
+                    ],
+                    "author_name": [
+                        "Arthur Burton La Cour"
+                    ],
+                    "place": [
+                        "Louisiana",
+                        "New Orleans"
+                    ],
+                    "subject": [
+                        "Carnival"
+                    ],
+                    "publisher_facet": [
+                        "Pelican Pub. Co."
+                    ],
+                    "place_key": [
+                        "louisiana",
+                        "new_orleans"
+                    ],
+                    "subject_facet": [
+                        "Carnival"
+                    ],
+                    "_version_": 1767941117249060864,
+                    "place_facet": [
+                        "Louisiana",
+                        "New Orleans"
+                    ],
+                    "lcc_sort": "F--0379.00000000.N5 L14 1957",
+                    "author_facet": [
+                        "OL2267623A Arthur Burton La Cour"
+                    ],
+                    "subject_key": [
+                        "carnival"
+                    ],
+                    "ddc_sort": "976.335"
+                },
+                {
+                    "key": "/works/OL16325005W",
+                    "type": "work",
+                    "seed": [
+                        "/books/OL25126926M",
+                        "/works/OL16325005W",
+                        "/subjects/denechaud_hotel_(new_orleans_la.)",
+                        "/subjects/hotels",
+                        "/subjects/place:new_orleans",
+                        "/subjects/place:louisiana",
+                        "/authors/OL7047136A"
+                    ],
+                    "title": "New Hotel Denechaud, New Orleans, La",
+                    "title_suggest": "New Hotel Denechaud, New Orleans, La",
+                    "title_sort": "New Hotel Denechaud, New Orleans, La",
+                    "edition_count": 1,
+                    "edition_key": [
+                        "OL25126926M"
+                    ],
+                    "publish_date": [
+                        "1907"
+                    ],
+                    "publish_year": [
+                        1907
+                    ],
+                    "first_publish_year": 1907,
+                    "number_of_pages_median": 26,
+                    "publish_place": [
+                        "New Orleans, La"
+                    ],
+                    "oclc": [
+                        "30573342"
+                    ],
+                    "last_modified_i": 1323824850,
+                    "ebook_count_i": 1,
+                    "ebook_access": "public",
+                    "has_fulltext": true,
+                    "public_scan_b": true,
+                    "ia": [
+                        "newhoteldenechau00dene"
+                    ],
+                    "ia_collection": [
+                        "americana",
+                        "university_maryland_cp"
+                    ],
+                    "ia_collection_s": "americana;university_maryland_cp",
+                    "lending_edition_s": "OL25126926M",
+                    "lending_identifier_s": "newhoteldenechau00dene",
+                    "cover_edition_key": "OL25126926M",
+                    "cover_i": 6984888,
+                    "publisher": [
+                        "The Hotel"
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "author_key": [
+                        "OL7047136A"
+                    ],
+                    "author_name": [
+                        "Denechaud Hotel (New Orleans, La.)"
+                    ],
+                    "place": [
+                        "New Orleans",
+                        "Louisiana"
+                    ],
+                    "subject": [
+                        "Denechaud Hotel (New Orleans, La.)",
+                        "Hotels"
+                    ],
+                    "publisher_facet": [
+                        "The Hotel"
+                    ],
+                    "place_key": [
+                        "louisiana",
+                        "new_orleans"
+                    ],
+                    "subject_facet": [
+                        "Denechaud Hotel (New Orleans, La.)",
+                        "Hotels"
+                    ],
+                    "_version_": 1767900312553652225,
+                    "place_facet": [
+                        "Louisiana",
+                        "New Orleans"
+                    ],
+                    "author_facet": [
+                        "OL7047136A Denechaud Hotel (New Orleans, La.)"
+                    ],
+                    "subject_key": [
+                        "denechaud_hotel_(new_orleans_la.)",
+                        "hotels"
+                    ]
+                },
+                {
+                    "key": "/works/OL15397127W",
+                    "type": "work",
+                    "seed": [
+                        "/books/OL24373409M",
+                        "/works/OL15397127W",
+                        "/subjects/cookery",
+                        "/authors/OL6829916A"
+                    ],
+                    "title": "Brennan's New Orleans cookbook",
+                    "title_suggest": "Brennan's New Orleans cookbook",
+                    "title_sort": "Brennan's New Orleans cookbook",
+                    "edition_count": 1,
+                    "edition_key": [
+                        "OL24373409M"
+                    ],
+                    "publish_date": [
+                        "1964"
+                    ],
+                    "publish_year": [
+                        1964
+                    ],
+                    "first_publish_year": 1964,
+                    "number_of_pages_median": 244,
+                    "publish_place": [
+                        "New Orleans"
+                    ],
+                    "oclc": [
+                        "276715"
+                    ],
+                    "contributor": [
+                        "Deutsch, Hermann B. (Hermann Bacher), 1889-"
+                    ],
+                    "lcc": [
+                        "TX-0725.00000000.B72"
+                    ],
+                    "ddc": [
+                        "641.59763355"
+                    ],
+                    "last_modified_i": 1581588641,
+                    "ebook_count_i": 1,
+                    "ebook_access": "borrowable",
+                    "has_fulltext": true,
+                    "public_scan_b": false,
+                    "ia": [
+                        "brennansneworlea00bren"
+                    ],
+                    "ia_collection": [
+                        "americana",
+                        "inlibrary",
+                        "internetarchivebooks",
+                        "printdisabled"
+                    ],
+                    "ia_collection_s": "americana;inlibrary;internetarchivebooks;printdisabled",
+                    "lending_edition_s": "OL24373409M",
+                    "lending_identifier_s": "brennansneworlea00bren",
+                    "printdisabled_s": "OL24373409M",
+                    "readinglog_count": 4,
+                    "want_to_read_count": 4,
+                    "currently_reading_count": 0,
+                    "already_read_count": 0,
+                    "cover_edition_key": "OL24373409M",
+                    "cover_i": 6614214,
+                    "publisher": [
+                        "R.L. Crager"
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "author_key": [
+                        "OL6829916A"
+                    ],
+                    "author_name": [
+                        "Brennan's (Restaurant : New Orleans, La.)"
+                    ],
+                    "subject": [
+                        "Cookery"
+                    ],
+                    "ia_box_id": [
+                        "IA124114"
+                    ],
+                    "publisher_facet": [
+                        "R.L. Crager"
+                    ],
+                    "subject_facet": [
+                        "Cookery"
+                    ],
+                    "_version_": 1767898761420341250,
+                    "lcc_sort": "TX-0725.00000000.B72",
+                    "author_facet": [
+                        "OL6829916A Brennan's (Restaurant : New Orleans, La.)"
+                    ],
+                    "subject_key": [
+                        "cookery"
+                    ],
+                    "ddc_sort": "641.59763355"
+                },
+                {
+                    "key": "/works/OL2040898W",
+                    "type": "work",
+                    "seed": [
+                        "/books/OL7899956M",
+                        "/works/OL2040898W",
+                        "/subjects/new_orleans_(la.)_description_and_travel",
+                        "/authors/OL247201A"
+                    ],
+                    "title": "New Orleans  (LA)",
+                    "title_suggest": "New Orleans  (LA)",
+                    "title_sort": "New Orleans  (LA)",
+                    "edition_count": 1,
+                    "edition_key": [
+                        "OL7899956M"
+                    ],
+                    "publish_date": [
+                        "September 27, 1999"
+                    ],
+                    "publish_year": [
+                        1999
+                    ],
+                    "first_publish_year": 1999,
+                    "number_of_pages_median": 128,
+                    "isbn": [
+                        "0738502235",
+                        "9780738502236"
+                    ],
+                    "last_modified_i": 1666096738,
+                    "ebook_count_i": 0,
+                    "ebook_access": "no_ebook",
+                    "has_fulltext": false,
+                    "public_scan_b": false,
+                    "cover_edition_key": "OL7899956M",
+                    "cover_i": 465647,
+                    "publisher": [
+                        "Arcadia Publishing"
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "author_key": [
+                        "OL247201A"
+                    ],
+                    "author_name": [
+                        "Eric J. Brock"
+                    ],
+                    "subject": [
+                        "New orleans (la.), description and travel"
+                    ],
+                    "id_goodreads": [
+                        "680610"
+                    ],
+                    "id_librarything": [
+                        "7775004"
+                    ],
+                    "publisher_facet": [
+                        "Arcadia Publishing"
+                    ],
+                    "subject_facet": [
+                        "New orleans (la.), description and travel"
+                    ],
+                    "_version_": 1767908691629047809,
+                    "author_facet": [
+                        "OL247201A Eric J. Brock"
+                    ],
+                    "subject_key": [
+                        "new_orleans_(la.)_description_and_travel"
+                    ]
+                },
+                {
+                    "key": "/works/OL8290483W",
+                    "type": "work",
+                    "seed": [
+                        "/books/OL8227470M",
+                        "/works/OL8290483W",
+                        "/authors/OL2754912A"
+                    ],
+                    "title": "New Orleans, LA",
+                    "title_suggest": "New Orleans, LA",
+                    "title_sort": "New Orleans, LA",
+                    "edition_count": 1,
+                    "edition_key": [
+                        "OL8227470M"
+                    ],
+                    "publish_date": [
+                        "December 2003"
+                    ],
+                    "publish_year": [
+                        2003
+                    ],
+                    "first_publish_year": 2003,
+                    "isbn": [
+                        "9780841624962",
+                        "0841624968"
+                    ],
+                    "last_modified_i": 1341770586,
+                    "ebook_count_i": 0,
+                    "ebook_access": "no_ebook",
+                    "has_fulltext": false,
+                    "public_scan_b": false,
+                    "cover_edition_key": "OL8227470M",
+                    "cover_i": 1589725,
+                    "publisher": [
+                        "Langenscheidt Publishers"
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "author_key": [
+                        "OL2754912A"
+                    ],
+                    "author_name": [
+                        "American Map Corporation"
+                    ],
+                    "id_librarything": [
+                        "4943945"
+                    ],
+                    "publisher_facet": [
+                        "Langenscheidt Publishers"
+                    ],
+                    "_version_": 1767942439449919490,
+                    "author_facet": [
+                        "OL2754912A American Map Corporation"
+                    ]
+                }
+            ],
+            "num_found": 6734,
+            "q": "new orleans, la",
+            "offset": null
+        }
+  recorded_at: Mon, 25 Sep 2023 16:00:19 GMT
+recorded_with: VCR 6.2.0

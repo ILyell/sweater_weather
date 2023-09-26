@@ -10,8 +10,8 @@ class MapQuestService
         end
     end
 
-    def get_geolocation(city,state)
-        response = get_url("/geocoding/v1/address?location=#{city}, #{state}")
+    def get_geolocation(location)
+        response = get_url("/geocoding/v1/address?location=#{location}")
         body = JSON.parse(response.body, symbolize_names: true)
         body[:results][0][:locations][0][:latLng]
     end

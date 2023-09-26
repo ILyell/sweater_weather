@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Api::V0::ForecastsController, type: :request do
     it 'sends current weather data for a city', :vcr do
 
-        get api_v0_forecast_path, params: { city: 'new orleans', state: 'LA' }
+        get api_v0_forecast_path, params: { location: 'new orleans, la' }
 
         expect(response).to be_successful
 

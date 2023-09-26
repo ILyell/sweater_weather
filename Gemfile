@@ -18,6 +18,7 @@ gem 'faraday'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
+gem 'jwt'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -49,6 +50,7 @@ group :development, :test do
   gem 'vcr'
   gem 'capybara'
   gem 'pry'
+  gem 'shoulda-matchers'
 end
 
 group :development do

@@ -7,6 +7,6 @@ class Api::V0::ForecastsController < ApplicationController
     private
 
     def search_params
-        params.permit(:city, :state)
+        params.permit(:location, :quantity)
     end
 end

@@ -9,14 +9,14 @@ RSpec.describe Api::V0::UsersController, type: :request do
             "password": "password",
             "password_confirmation": "password"
         }
-        
+
         body = JSON.generate(params)
     
         post '/api/v0/users', headers: headers, params: body
 
         expect(response.status).to eq(201)
         
-        data = response.body
+        data = JSON.parse(response.body, symbolize_names: true)
 
         expect(data[:data]).to have_key(:type)
         expect(data[:data]).to have_key(:id)

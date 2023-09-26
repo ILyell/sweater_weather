@@ -90,4 +90,6 @@ RSpec.describe Api::V0::UsersController, type: :request do
         expect(data[:data][:attributes][:api_key]).to eq(key)
 
     end
+
+    
 end

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     namespace :v0 do
       resource :forecast, only: :show
       resource :users, only: :create
+      post 'sessions', to: 'users#session'
     end
     namespace :v1 do
       get 'book-search', to: 'books#index'

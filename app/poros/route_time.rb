@@ -18,8 +18,6 @@ class RouteTime
             Time.at(@route_time_seconds).to_datetime
             arrival = @current_time + @route_time_seconds.seconds
             round_to_nearest_hour(arrival)
-        else
-            @current_time
         end
     end
 

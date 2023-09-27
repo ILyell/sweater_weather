@@ -1,4 +1,4 @@
-class RoadTripSerializer < ForecastSerializer
+class RoadTripSerializer
 
     def initialize(origin,destination,time,forecast)
         @origin = origin

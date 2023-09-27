@@ -10,5 +10,13 @@ RSpec.describe 'MapQuest Service' do
             expect(location).to have_key(:lat)
             expect(location).to have_key(:lng)
         end
+
+        it 'returns time to destination from 2 given locations', :vcr do
+            service = MapQuestService.new
+
+            time = service.get_route_time('new orleans, la', 'baton rouge, la')
+            
+            expect(time).to eq(4279)
+        end
     end
 end

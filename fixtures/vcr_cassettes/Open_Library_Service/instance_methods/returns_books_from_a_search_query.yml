@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.18.0 (Ubuntu)
       Date:
-      - Tue, 26 Sep 2023 23:59:14 GMT
+      - Wed, 27 Sep 2023 05:25:17 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -35,7 +35,7 @@ http_interactions:
       Access-Control-Max-Age:
       - '86400'
       X-Ol-Stats:
-      - '"SR 1 0.172 TT 0 0.173"'
+      - '"SR 1 0.218 TT 0 0.219"'
       Referrer-Policy:
       - no-referrer-when-downgrade
     body:
@@ -468,5 +468,5 @@ http_interactions:
             "q": "new orleans, la",
             "offset": null
         }
-  recorded_at: Tue, 26 Sep 2023 23:59:14 GMT
+  recorded_at: Wed, 27 Sep 2023 05:25:17 GMT
 recorded_with: VCR 6.2.0

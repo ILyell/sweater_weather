@@ -4,7 +4,7 @@ class Api::V0::RoadTripController < ApplicationController
         token = JWT.decode(session_params[:api_key],  Rails.application.credentials.internal_key[:key])
         user = User.find(token[0]["user_id"])
         if user
-            render json: RoadTripSerializer.new(session_params).serialize
+            render json: RoadTripFacade.new(session_params).serialize
         end
     rescue JWT::DecodeError
         render json: {errors: "Unauthorized"}, status: 401
@@ -13,6 +13,6 @@ class Api::V0::RoadTripController < ApplicationController
     private
 
     def session_params
-        params.permit(:origin, :destination, :api_key)
+        params.require(:road_trip).permit(:origin, :destination, :api_key)
     end
 end

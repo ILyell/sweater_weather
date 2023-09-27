@@ -4,7 +4,7 @@ class Api::V0::UsersController < ApplicationController
         user = User.create(user_create_params)
         if user.valid?
             token = JWT.encode({user_id: user.id}, Rails.application.credentials.internal_key[:key], 'HS256')
-            render json: UserSerializer.new(user, token).serialize, status: 201 
+            render json: UserSerializer.serialize(user, token), status: 201 
         else
             render json: {errors: user.errors.full_messages}, status: 400
         end
@@ -14,7 +14,7 @@ class Api::V0::UsersController < ApplicationController
         user = User.find_by(email: login_params[:email])
         if user && user.authenticate(login_params[:password])
             token = JWT.encode({user_id: user.id}, Rails.application.credentials.internal_key[:key], 'HS256')
-            render json: UserSerializer.new(user, token).serialize, status: 200
+            render json: UserSerializer.serialize(user, token), status: 200
         else
             render json: {errors: "Incorrect Email / Or Password"}, status: 400
         end

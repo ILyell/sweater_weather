@@ -1,18 +1,13 @@
 class UserSerializer
 
-    def initialize(user, token)
-        @user = user
-        @token = token
-    end
-
-    def serialize
+    def self.serialize(user, token)
         {
             data: {
                 type: "users",
-                id: @user.id,
+                id: user.id,
                 attributes: {
-                    email: @user.email,
-                    api_key: @token
+                    email: user.email,
+                    api_key: token
                 }
             }
         }

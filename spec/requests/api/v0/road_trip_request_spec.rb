@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Api::V0::RoadTripsController, type: :request do
+RSpec.describe Api::V0::RoadTripController, type: :request do
     it 'sends current weather data for a city', :vcr do
 
         headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
@@ -35,13 +35,25 @@ RSpec.describe Api::V0::RoadTripsController, type: :request do
 
         expect(response).to be_successful
 
-        weather = JSON.parse(response.body, symbolize_names: true)
+        road_trip = JSON.parse(response.body, symbolize_names: true)
 
-        expect(weather).to have_key(:data)
+        expect(road_trip).to have_key(:data)
 
-        expect(weather[:data]).to have_key(:id)
-        expect(weather[:data][:type]).to eq("forecast")
-        expect(weather[:data]).to have_key(:attributes)
+        expect(road_trip[:data]).to have_key(:id)
+        expect(road_trip[:data]).to have_key(:type)
+        expect(road_trip[:data]).to have_key(:attributes)
 
-        end
+        expect(road_trip[:data][:attributes]).to have_key(:start_city)
+        expect(road_trip[:data][:attributes][:start_city]).to eq("new orleans, la")
+
+        expect(road_trip[:data][:attributes]).to have_key(:end_city)
+        expect(road_trip[:data][:attributes][:end_city]).to eq("baton rouge, la")
+
+        expect(road_trip[:data][:attributes]).to have_key(:travel_time)
+        expect(road_trip[:data][:attributes]).to have_key(:weather_at_eta)
+
+        expect(road_trip[:data][:attributes][:weather_at_eta]).to have_key(:datetime)
+        expect(road_trip[:data][:attributes][:weather_at_eta]).to have_key(:temperature)
+        expect(road_trip[:data][:attributes][:weather_at_eta]).to have_key(:condition)
+    end
 end

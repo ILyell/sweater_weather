@@ -13,6 +13,6 @@ class Api::V0::RoadTripController < ApplicationController
     private
 
     def session_params
-        params.permit(:origin, :destination, :api_key)
+        params.require(:road_trip).permit(:origin, :destination, :api_key)
     end
 end

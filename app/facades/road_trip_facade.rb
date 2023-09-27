@@ -23,6 +23,6 @@ class RoadTripFacade < BaseFacade
     end
 
     def serialize
-        RoadTripSerializer.new(@origin,@destination,@time,@forecast).serialize
+        RoadTripSerializer.serialize(@origin,@destination,@time,@forecast)
     end
 end

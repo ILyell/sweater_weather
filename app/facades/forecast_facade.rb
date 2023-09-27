@@ -16,6 +16,6 @@ class ForecastFacade < BaseFacade
     end
 
     def serialize
-        ForecastSerializer.new(@forecast).serialize
+        ForecastSerializer.serialize(@forecast)
     end
 end

@@ -1,4 +1,4 @@
-class ForecastSerializer
+class ForecastSerializer < BaseFacade
     def initialize(params)
         @location = params
         @geo = geo_service.get_geolocation(@location)
@@ -18,14 +18,6 @@ class ForecastSerializer
             }
         }
     end 
-
-    def geo_service
-        @_geo ||= MapQuestService.new
-    end
-
-    def weather_service
-        @_weather ||= WeatherService.new
-    end
 
     def current_weather
         {

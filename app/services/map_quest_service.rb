@@ -24,9 +24,9 @@ class MapQuestService
     end
 
     def get_route_time(loc_1, loc_2)
-        body = { locations: [loc_1, loc_2] }
-        response = post_url("https://www.mapquestapi.com/directions/v2/routematrix", body)
+        post_body = { locations: [loc_1, loc_2] }
+        response = post_url("https://www.mapquestapi.com/directions/v2/routematrix", post_body)
         body = JSON.parse(response.body, symbolize_names: true)
-        body[:time][1]
+        body[:time][1] if body.has_key?(:time)
     end
 end

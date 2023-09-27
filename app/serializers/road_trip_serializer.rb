@@ -37,7 +37,7 @@ class RoadTripSerializer < ForecastSerializer
     end
 
     def travel_time
-        if @route_time != nil
+        if @route_time != 0
             seconds_to_time(@route_time)
         else
             "Travel is impossible!"
